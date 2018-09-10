@@ -2,7 +2,9 @@ import express from 'express';
 import exphbs from 'express-handlebars';
 import bodyParser from 'body-parser';
 import github from 'octonode';
-import octoKit from '@octokit/rest'
+import octokit from '@octokit/rest';
+
+
 
 
 
@@ -25,15 +27,37 @@ app.get('/', (req, res) => res.render('home', {
 }));
 
 app.post('/', (req, res) => {
-    const client = github.client({
+    /* const client = github.client({
         id: '54d96e07e3699b7c02a0',
         secret: '69bccfe93bfded69db030e14b7b33ef342f8c113'
-    });
-    let inputUser = req.body.user;
-    const ghuser = client.user(inputUser);
-    console.log(ghuser);
-    client.get(`/users/${inputUser}`, {}, (err, status, body, headers) => {
-        if (body.followers !== 0) {
+    }); */
+
+    const octokit = require('@octokit/rest')({
+        timeout: 0, // 0 means no request timeout
+        headers: {
+          accept: 'application/vnd.github.v3+json',
+          'user-agent': 'octokit/rest.js v1.2.3' // v1.2.3 will be current version
+        },
+       
+        // custom GitHub Enterprise URL
+        baseUrl: 'https://api.github.com',
+       
+        // Node only: advanced request options can be passed as http(s) agent
+        agent: undefined
+      })
+
+    let username = req.body.user;
+    // const ghuser = client.user(inputUser);
+    // console.log(ghuser);
+    octokit.users.getForUser({
+        username: username,
+      }).then(({data, headers, status}) => {
+        res.render('home', { data: data})
+      })
+    
+    
+
+        /* if (body.followers !== 0) {
             console.log(ghuser.followers({
                 per_page: 100
             }, (err, data, headers) => {
@@ -43,12 +67,10 @@ app.post('/', (req, res) => {
                 res.render('home', {data: body, followers: data.map(item => item.login)});
             }));
             
-        }
+        } */
         // const searchedUser = body;
         //json object
     });
-    
-});
 
 
 

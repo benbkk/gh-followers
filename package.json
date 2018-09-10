@@ -10,9 +10,14 @@
     "dev": "nodemon index.js --exec babel-node"
   },
   "dependencies": {
+    "@octokit/rest": "^15.11.1",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "normalize.css": "^8.0.0"
+    "gh.js": "^3.0.12",
+    "normalize.css": "^8.0.0",
+    "octonode": "^0.9.4",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

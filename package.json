@@ -10,7 +10,9 @@
     "dev": "nodemon index.js --exec babel-node"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "normalize.css": "^8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

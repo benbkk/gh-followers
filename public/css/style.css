@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    min-height: inherit;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}

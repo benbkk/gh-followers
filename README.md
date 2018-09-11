@@ -1,7 +1,7 @@
 # gh-followers
 Assessment Task for GetLinks - Getting github Followers by Username
 
-[ScreenShot](https://user-images.githubusercontent.com/2276565/45339793-3c9aed00-b5be-11e8-9151-0e6d7502d989.png)
+![ScreenShot](https://user-images.githubusercontent.com/2276565/45339793-3c9aed00-b5be-11e8-9151-0e6d7502d989.png)
 
 
 ### Ingredients

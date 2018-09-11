@@ -1,9 +1,16 @@
 import express from 'express';
+import favIcon from 'serve-favicon';
+import path from 'path';
 import exphbs from 'express-handlebars';
 import bodyParser from 'body-parser';
 import github from 'octonode';
+import Handlebars from 'handlebars';
+import HandlebarsIntl from 'handlebars-intl';
+
+HandlebarsIntl.registerWith(Handlebars);
 
 const app = express();
+app.use(favIcon(path.join(__dirname, 'public', 'favicon.ico')));
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -45,6 +52,7 @@ app.post('/', (req, res) => {
             name: data.name,
             followers: data.followers,
             avatarUrl: data.avatar_url,
+            location: data.location,
         }
         let userFollowers = {};
         if (data.followers > 0) {

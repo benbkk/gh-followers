@@ -9,7 +9,45 @@ html {
 body {
     min-height: inherit;
     position: relative;
-    font-family: 'Open Sans', sans-serif;
+    background-color: #ecf0f1;
+}
+
+.hide {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+input[type=search] {
+    border-top-color: transparent!important;
+    border-left-color: transparent!important;
+    border-right-color: transparent!important;
+    border-bottom-color: rgba(255, 255,255, 0.25);
+    border-radius: 0;
+    color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255,255, 0.5);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:rgba(255, 255,255, 0.5);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255,255, 0.5);
+}
+
+.button {
+    color: white!important;
+    border-color: white!important;
 }
 
 input:focus,
@@ -25,9 +63,79 @@ h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
+.xlg {
+    font-size: 4em;
+}
 
-.container {
-    max-width: 1170px;
-    padding: 0 36px;
-    margin: auto;
+.lg {
+    font-size: 2em;
+}
+
+dl {
+    display: block;
+    margin: 18px 0;
+}
+
+dl dt {
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+dl dd {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mt-50t {
+    transform: translateY(-50%);
+    margin-top: -50%!important;
+}
+.mt-4 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+.white {
+    color: white;
+}
+
+.avatar-sm {
+    width: 120px;
+    height: 120px;
+}
+
+.avatar-lg {
+    width: 300px;
+    height: 300px;
+}
+
+.page-header {
+    padding: 36px;
+    background: #3A1C71;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+table {
+    background: rgba(255,255,255, 0.3);
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 18px;
 }

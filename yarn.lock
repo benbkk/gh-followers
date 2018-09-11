@@ -1453,7 +1453,15 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-handlebars@^4.0.5:
+handlebars-intl@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/handlebars-intl/-/handlebars-intl-1.1.2.tgz#53ab641d19a2d5832ad6a09917511248d6bc6720"
+  dependencies:
+    intl-format-cache "2.0.5"
+    intl-messageformat "1.1.0"
+    intl-relativeformat "1.1.0"
+
+handlebars@^4.0.12, handlebars@^4.0.5:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
   dependencies:
@@ -1611,6 +1619,26 @@ inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@~2.0.3:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+
+intl-format-cache@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-2.0.5.tgz#b484cefcb9353f374f25de389a3ceea1af18d7c9"
+
+intl-messageformat-parser@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.1.0.tgz#e8ed8f30853969bf1f5bedef0e944d2b1053409b"
+
+intl-messageformat@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-1.1.0.tgz#f46a168c1bd5e1838ecbddda809a0754727f4422"
+  dependencies:
+    intl-messageformat-parser "1.1.0"
+
+intl-relativeformat@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/intl-relativeformat/-/intl-relativeformat-1.1.0.tgz#86dc7b8b212883de186d9fda56b874012948df20"
+  dependencies:
+    intl-messageformat "1.1.0"
 
 invariant@^2.2.2:
   version "2.2.4"
@@ -2007,6 +2035,10 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+ms@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
 nan@^2.9.2:
   version "2.11.0"
@@ -2610,6 +2642,16 @@ send@0.16.2:
     on-finished "~2.3.0"
     range-parser "~1.2.0"
     statuses "~1.4.0"
+
+serve-favicon@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/serve-favicon/-/serve-favicon-2.5.0.tgz#935d240cdfe0f5805307fdfe967d88942a2cbcf0"
+  dependencies:
+    etag "~1.8.1"
+    fresh "0.5.2"
+    ms "2.1.1"
+    parseurl "~1.3.2"
+    safe-buffer "5.1.1"
 
 serve-static@1.13.2:
   version "1.13.2"

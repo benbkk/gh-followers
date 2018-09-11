@@ -1,12 +1,17 @@
 <section class="user-profile">
     <div class="container">
         <div class="row">
-            <div class="column column-80">
+            <div class="column column-75">
                 <h2>{{userData.name}}</h2>
-                {{userData.followers}}
+                <p>{{userData.location}}</p>
+                <dl>
+                    <dt>Followers</dt>
+                    <dd>{{formatNumber userData.followers}}</dd>
+                </dl>
             </div>
-            <div class="column column-20">
-                <img src={{userData.avatarUrl}} alt={{userData.name}} />
+            <div class="column column-25">
+                <figure class="avatar avatar-lg mt-50t"><img src={{userData.avatarUrl}} alt={{userData.name}} /></figure>
+                
             </div>
         </div>
     </div>

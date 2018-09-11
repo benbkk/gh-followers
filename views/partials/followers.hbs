@@ -1,7 +1,22 @@
 <section class="results">
     <div class="container">
-       {{#each userData.data}}
-            {{@key}} {{login}}
-        {{/each}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Avatar</th>
+                    <th>Login</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each userData.data}}
+                <tr>
+                    <td><figure class="avatar avatar-sm"><img src={{avatar_url}} alt={{login}} /></figure></td>
+                    <td>{{login}}</td>
+                    <td><a href={{html_url}}>{{html_url}}</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
     </div>
 </section>

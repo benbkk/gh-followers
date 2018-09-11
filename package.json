@@ -14,8 +14,11 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.12",
+    "handlebars-intl": "^1.1.2",
     "normalize.css": "^8.0.0",
-    "octonode": "^0.9.4"
+    "octonode": "^0.9.4",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
